@@ -1,0 +1,14 @@
+.themeSwitcher {
+}
+
+.icon {
+  vertical-align: middle;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  & > path {
+    fill: var(--primary-color);
+  }
+}

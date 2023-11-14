@@ -6,22 +6,23 @@ const Router = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        {Object.values(routeConfig).map(({element, path}) => 
+        {Object.values(routeConfig).map(({ element, path }) => (
           <Route
             key={path}
             element={(
               <Suspense fallback={<div>Loading..</div>}>
-                <div className='page-wrapper'>
+                <div className="page-wrapper">
                   {element}
                 </div>
               </Suspense>
             )}
             path={path}
           />
+        ),
         )}
       </Routes>
     </Suspense>
-  )
-}
+  );
+};
 
-export default Router
+export default Router;

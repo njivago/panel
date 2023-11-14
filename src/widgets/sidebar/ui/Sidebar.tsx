@@ -1,6 +1,7 @@
 import styles from './Sidebar.module.scss';
 import classNames from 'classNames';
-import { FC, useState } from 'react';
+import type { FC } from 'react';
+import { useState } from 'react';
 import { Button } from 'shared/ui';
 
 type Props = {
@@ -16,7 +17,7 @@ const Sidebar: FC<Props> = ({ className = '' }) => {
     <div className={classNames(styles.sidebar, className, { [styles.collapsed]: isCollapsed })}>
       <Button onClick={onToggle}>Toggle</Button>
     </div>
-  )
-}
+  );
+};
 
 export default Sidebar;

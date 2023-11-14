@@ -5,7 +5,7 @@ const AboutPage = () => {
 
   return (
     <div>{t('AboutPage')}</div>
-  )
-}
+  );
+};
 
 export default AboutPage;

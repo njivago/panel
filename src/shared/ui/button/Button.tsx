@@ -11,10 +11,8 @@ const Button: FC<Props> = ({ className, theme = 'text', ...props }) => {
     <button
       className={classNames(styles.button, className, styles[theme])}
       {...props}
-    >
-
-    </button>
+    />
   );
-}
+};
 
 export default Button;

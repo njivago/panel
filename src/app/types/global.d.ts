@@ -1,6 +1,6 @@
 declare module '*.scss' {
   interface IClassNames {
-    [className: string]: string
+    [className: string]: string;
   }
 
   const classNames: IClassNames;
@@ -9,7 +9,7 @@ declare module '*.scss' {
 }
 
 declare module '*.svg' {
-  import React from 'react';
+  import type React from 'react';
 
   const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
 

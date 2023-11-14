@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.scss';
+import { useTranslation } from 'react-i18next';
 import classNames from 'classNames';
 import { NavLink } from 'shared/ui';
 import { LanguageSwitcher } from 'widgets/language';

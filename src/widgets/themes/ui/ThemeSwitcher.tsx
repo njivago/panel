@@ -20,6 +20,6 @@ const ThemeSwitcher = ({ className }: Props) => {
       <ThemeIcon className={styles.icon} />
     </Button>
   );
-}
+};
 
 export default memo(ThemeSwitcher);

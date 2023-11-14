@@ -1,5 +1,5 @@
 import { type Dispatch, createContext, useContext } from 'react';
-import { Theme } from './constants';
+import type { Theme } from './constants';
 
 export type ThemeContextProps = {
   theme?: Theme;

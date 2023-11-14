@@ -13,6 +13,6 @@ const LanguageSwitcher = () => {
       {t('Language')}
     </Button>
   );
-}
+};
 
 export default LanguageSwitcher;

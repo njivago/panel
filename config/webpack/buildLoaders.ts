@@ -10,6 +10,26 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     use: ['@svgr/webpack'],
   };
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env'],
+        "plugins": [
+          [
+            "i18next-extract",
+            {
+              locales: ['ua', 'en'],
+              keyAsDefaultValue: true
+            }
+          ],
+        ]
+      }
+    }
+  };
+
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
@@ -43,6 +63,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
   };
 
   return [
+    babelLoader,
     typescriptLoader,
     cssLoaders,
     fileLoader,
